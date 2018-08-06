@@ -12,14 +12,10 @@
  * Modified By:    姜阳 (j824544269@gmail.com)
  * 
  */
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include "headers.h"
 
 int main()
 {
-    using namespace std;
-
     vector<int> prices = {1, 2, 3, 4, 5};
     vector<int> prices2 = {2, 3, 1, 8, 7};
 

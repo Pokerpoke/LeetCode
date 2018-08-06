@@ -18,25 +18,22 @@ int main()
 {
     vector<int> digits = {9, 8, 7, 6, 5, 4, 3, 2, 1, 9};
 
-    // for (int i = digits.size() - 1; i >= 0; i--)
-    int i = digits.size();
-    while (i-- > 0)
+    int carry = 1;
+    for (int i = digits.size() - 1; i >= 0; i--)
     {
-        if (digits[i] == 9)
-        {
-            digits[i] = 0;
-        }
-        else
-        {
-            digits[i] += 1;
+        if (carry == 0)
+            // return digits;
             break;
-        }
+        int sum = digits[i] + carry;
+        digits[i] = sum % 10;
+        carry = sum / 10;
     }
     for (auto it : digits)
     {
         cout << it << endl;
     }
-    digits.insert(digits.begin(), 1);
+    if (carry == 1)
+        digits.insert(digits.begin(), 1);
 
     for (auto it : digits)
     {

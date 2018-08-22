@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-08-06
+ * Last Modified:  2018-08-22
  * Modified By:    姜阳 (j824544269@gmail.com)
  * 
  */
@@ -24,6 +24,8 @@
 #include <set>
 #include <unordered_set>
 #include <unordered_map>
+
+#include <cctype>
 
 using namespace std;
 

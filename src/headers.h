@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-08-22
+ * Last Modified:  2018-08-27
  * Modified By:    姜阳 (j824544269@gmail.com)
  * 
  */
@@ -27,6 +27,8 @@
 
 #include <cctype>
 #include <climits>
+
+#include "listnode.h"
 
 using namespace std;
 

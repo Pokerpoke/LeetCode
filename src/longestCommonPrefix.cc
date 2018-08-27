@@ -14,14 +14,14 @@
  */
 #include "headers.h"
 
-string main()
+int main()
 {
     vector<string> strs{{"flower"}, {"flow"}, {"flight"}};
     // vector<string> strs{{"ower"}, {"flow"}, {"flight"}};
     // vector<string> &strs{};
 
     if (strs.empty())
-        return "";
+        return 0;
 
     string res;
     int min_size = strs[0].size();

@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-08-28
+ * Last Modified:  2018-08-29
  * Modified By:    姜阳 (j824544269@gmail.com)
  * 
  */
@@ -28,7 +28,8 @@ int main()
     ListNode *fast = l.head;
 
     if (fast == nullptr)
-        return head->next;
+        // return l.head->next;
+        cout << "head->next";
 
     for (size_t i = 0; i < n; i++)
         fast = fast->next;

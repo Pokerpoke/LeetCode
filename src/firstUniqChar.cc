@@ -8,7 +8,7 @@
  * @brief
  * @version  0.0.1
  *
- * Last Modified:  2018-08-22
+ * Last Modified:  2018-08-29
  * Modified By:    姜阳 (j824544269@gmail.com)
  *
  */
@@ -21,8 +21,8 @@ int main()
 
     if (s.size() == 0)
         return -1;
-    int cnt[26];
-    memset(cnt, 0, sizeof(cnt));
+    int cnt[26] = {0};
+    // memset(cnt, 0, sizeof(cnt));
 
     for (int i = 0; i < s.size(); i++)
         cnt[(s[i] - 'a')]++;

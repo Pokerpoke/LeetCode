@@ -14,7 +14,7 @@
  */
 #include "headers.h"
 
-bool main()
+int main()
 {
     vector<vector<char>> board{{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
                                {'6', '.', '.', '1', '9', '5', '.', '.', '.'},

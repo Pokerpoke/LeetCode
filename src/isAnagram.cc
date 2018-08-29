@@ -8,13 +8,13 @@
  * @brief
  * @version  0.0.1
  *
- * Last Modified:  2018-08-22
+ * Last Modified:  2018-08-29
  * Modified By:    姜阳 (j824544269@gmail.com)
  *
  */
 #include "headers.h"
 
-bool main()
+int main()
 {
     string s("anagram");
     string t("nagaram");

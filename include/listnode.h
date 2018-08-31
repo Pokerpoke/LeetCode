@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-08-27
+ * Last Modified:  2018-08-31
  * Modified By:    姜阳 (j824544269@gmail.com)
  * 
  */
@@ -16,6 +16,7 @@
 #define _LISTNODE_H_
 
 #include <iostream>
+#include <vector>
 
 struct ListNode
 {
@@ -37,6 +38,13 @@ class List
         head = nullptr;
         tail = nullptr;
     };
+    List(const std::vector<int> &in)
+    {
+        head = nullptr;
+        tail = nullptr;
+        for (auto it : in)
+            this->insert(it);
+    };
 
     ~List(){};
 
@@ -57,15 +65,19 @@ class List
         }
     };
 
-    void print()
+    void print_list(ListNode *head)
     {
-        ListNode *p = head;
-        while (p != nullptr)
+        while (head != nullptr)
         {
-            std::cout << p->val << " ";
-            p = p->next;
+            std::cout << head->val << " ";
+            head = head->next;
         }
         std::cout << std::endl;
+    }
+
+    void print()
+    {
+        print_list(head);
     }
 };
 

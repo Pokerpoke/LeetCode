@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-08-27
+ * Last Modified:  2018-08-30
  * Modified By:    姜阳 (j824544269@gmail.com)
  * 
  */
@@ -16,6 +16,7 @@
 #ifndef _HEADERS_H_
 #define _HEADERS_H_
 
+// c++ stl libraries
 #include <iostream>
 #include <string>
 #include <vector>
@@ -25,9 +26,14 @@
 #include <unordered_set>
 #include <unordered_map>
 
+// c libraries
 #include <cctype>
 #include <climits>
 
+// gtest
+#include <gtest/gtest.h>
+
+// listnode
 #include "listnode.h"
 
 using namespace std;

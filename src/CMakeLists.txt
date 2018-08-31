@@ -6,5 +6,7 @@ foreach(T_FILE_NAME ${EXECUTABLE})
     target_link_libraries(
         ${EXECUTABLE_NAME}
         leetcode
+        gtest
+        ${CMAKE_THREAD_LIBS_INIT}
 	)
 endforeach()

@@ -25,6 +25,16 @@ struct ListNode
     ListNode(int x = 0, ListNode *p = nullptr) : val(x), next(nullptr){};
 };
 
+void print_list(ListNode *head)
+{
+    while (head != nullptr)
+    {
+        std::cout << head->val << " ";
+        head = head->next;
+    }
+    std::cout << std::endl;
+}
+
 class List
 {
     //   private:
@@ -64,16 +74,6 @@ class List
             tail->next = nullptr;
         }
     };
-
-    void print_list(ListNode *head)
-    {
-        while (head != nullptr)
-        {
-            std::cout << head->val << " ";
-            head = head->next;
-        }
-        std::cout << std::endl;
-    }
 
     void print()
     {

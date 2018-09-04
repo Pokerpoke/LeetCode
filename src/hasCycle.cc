@@ -20,16 +20,16 @@ class Solution
   public:
     bool hasCycle(ListNode *head)
     {
-        if (haed == nullptr || head->next == nullptr)
+        if (head == nullptr || head->next == nullptr)
             return false;
         ListNode *fast = head;
         ListNode *slow = head;
-        while (fast != nullptr)
+        while (fast != nullptr && fast->next != nullptr)
         {
-            if (fast == slow || fast->next == slow)
-                return true;
             fast = fast->next->next;
             slow = slow->next;
+            if (fast == slow)
+                return true;
         }
         return false;
     }

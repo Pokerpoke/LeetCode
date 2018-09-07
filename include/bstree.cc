@@ -31,11 +31,11 @@ Tree::Tree(std::vector<int> &in)
         std::cout << it << " ";
     std::cout << std::endl;
     root = insert_ordered(in, 0, in.size() - 1);
-    // for (auto it : in)
-    //     insert(it);
 }
 
-Tree::~Tree() {}
+Tree::~Tree()
+{
+}
 
 void Tree::print_tree(TreeNode *root)
 {

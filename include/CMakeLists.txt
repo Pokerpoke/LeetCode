@@ -7,5 +7,5 @@
 # 	# )
 # endforeach()
 
-# aux_source_directory(. leetcode)
-add_library(leetcode INTERFACE)
+aux_source_directory(. LEETCODE)
+add_library(leetcode ${LEETCODE})

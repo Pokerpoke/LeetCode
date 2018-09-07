@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-08-30
+ * Last Modified:  2018-09-04
  * Modified By:    姜阳 (j824544269@gmail.com)
  * 
  */
@@ -35,6 +35,7 @@
 
 // listnode
 #include "listnode.h"
+#include "bstree.h"
 
 using namespace std;
 

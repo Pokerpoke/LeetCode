@@ -8,8 +8,8 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-09-04
- * Modified By:    姜阳 (j824544269@gmail.com)
+ * Last Modified:  2018-09-10
+ * Modified By:    姜阳 (pokerpoke@qq.com)
  * 
  */
 
@@ -29,6 +29,8 @@
 // c libraries
 #include <cctype>
 #include <climits>
+#include <cmath>
+#include <cstring>
 
 // gtest
 #include <gtest/gtest.h>

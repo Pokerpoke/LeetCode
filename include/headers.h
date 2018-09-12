@@ -3,12 +3,12 @@
  * Copyright (c) 2018 NUAA Jiang Yang
  * 
  * @file
- * @author   姜阳 (j824544269@gmail.com)
+ * @author   姜阳 (pokerpoke@qq.com)
  * @date     2018-08
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-09-10
+ * Last Modified:  2018-09-12
  * Modified By:    姜阳 (pokerpoke@qq.com)
  * 
  */
@@ -25,6 +25,8 @@
 #include <set>
 #include <unordered_set>
 #include <unordered_map>
+#include <stack>
+#include <queue>
 
 // c libraries
 #include <cctype>

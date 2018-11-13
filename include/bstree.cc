@@ -8,8 +8,8 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-09-07
- * Modified By:    姜阳 (j824544269@gmail.com)
+ * Last Modified:  2018-11-13
+ * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
 
@@ -90,4 +90,12 @@ void Tree::print()
 {
     print_tree(root);
     std::cout << std::endl;
+}
+
+void Tree::push(std::vector<int> &in)
+{
+    for (auto i : in)
+    {
+        this->insert(i);
+    }
 }

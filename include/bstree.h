@@ -8,8 +8,8 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-09-07
- * Modified By:    姜阳 (j824544269@gmail.com)
+ * Last Modified:  2018-11-13
+ * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
 #ifndef _BSTREE_H_
@@ -40,5 +40,6 @@ class Tree
     void insert(const int &x, TreeNode *&parent);
     bool is_empty();
     void print();
+    void push(std::vector<int> &in);
 };
 #endif //!_BSTREE_H_

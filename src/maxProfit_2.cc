@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-09-21
+ * Last Modified:  2018-11-14
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -19,7 +19,14 @@ class Solution
   public:
     int maxProfit(vector<int> &prices)
     {
-        return true;
+        int buy = INT_MAX;
+        int max_profit = 0;
+        for (auto i : prices)
+        {
+            buy = min(buy, i);
+            max_profit = max(max_profit, i - buy);
+        }
+        return max_profit;
     }
 };
 

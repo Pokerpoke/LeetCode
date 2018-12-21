@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-11-13
+ * Last Modified:  2018-12-21
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -27,12 +27,7 @@ TEST(isValid, isValid)
 {
     Solution s;
     EXPECT_TRUE(s.isValid(""));
-    EXPECT_TRUE(s.isValid("()"));
-    EXPECT_FALSE(s.isValid(")"));
-    EXPECT_TRUE(s.isValid("[]"));
-    EXPECT_TRUE(s.isValid("()[]{}"));
-    EXPECT_FALSE(s.isValid("(])"));
-    EXPECT_FALSE(s.isValid("([)]"));
+    EXPECT_EQ(s.isValid(""), true);
 }
 
 int main(int argc, char **argv)

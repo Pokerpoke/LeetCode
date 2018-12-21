@@ -7,6 +7,8 @@ foreach(T_FILE_NAME ${EXECUTABLE})
         ${EXECUTABLE_NAME}
         leetcode
         gtest
+        gtest_main
         ${CMAKE_THREAD_LIBS_INIT}
     )
+    gtest_discover_tests(${EXECUTABLE_NAME})
 endforeach()

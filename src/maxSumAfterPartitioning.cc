@@ -23,7 +23,7 @@ public:
     }
 };
 
-TEST(maxSumAfterPartitioning, maxSumAfterPartitioning)
+TEST(maxSumAfterPartitioning, maxSumAfterPartitioning_1)
 {
     Solution s;
     vector<int> v = {1, 15, 7, 9, 2, 5, 10};

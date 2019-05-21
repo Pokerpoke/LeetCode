@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-12-11
+ * Last Modified:  2019-05-21
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -16,7 +16,7 @@
 
 class Solution
 {
-  public:
+public:
     int computeArea(int A, int B, int C, int D, int E, int F, int G, int H)
     {
         int area = (C - A) * (D - B) + (G - E) * (H - F);

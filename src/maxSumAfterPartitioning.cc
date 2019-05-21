@@ -17,17 +17,18 @@
 class Solution
 {
 public:
-    bool isValid(string s)
+    int maxSumAfterPartitioning(vector<int> &A, int K)
     {
-        return true;
+        return 0;
     }
 };
 
-TEST(isValid, isValid_1)
+TEST(maxSumAfterPartitioning, maxSumAfterPartitioning)
 {
     Solution s;
-    EXPECT_TRUE(s.isValid(""));
-    EXPECT_EQ(s.isValid(""), true);
+    vector<int> v = {1, 15, 7, 9, 2, 5, 10};
+    int k = 3;
+    EXPECT_EQ(s.maxSumAfterPartitioning(v, k), 84);
 }
 
 int main(int argc, char **argv)

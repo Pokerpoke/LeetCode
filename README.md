@@ -1,10 +1,22 @@
 # LeetCode
 
-## 解释
+## Solution ideas
 
-位于`doc`目录下
+Under `doc` directory.
 
-## 编译
+## Debug
+
+```shell
+./leetcode Solution
+```
+
+## Generate template
+
+```shell
+generate_template Solution
+```
+
+## Compile
 
 ```shell
 mkdir build

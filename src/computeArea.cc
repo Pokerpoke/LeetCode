@@ -4,11 +4,11 @@
  * 
  * @file
  * @author   Jiang Yang (pokerpoke@qq.com)
- * @date     2018-12
+ * @date     2018-11
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-05-21
+ * Last Modified:  2019-05-22
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -27,7 +27,7 @@ public:
     }
 };
 
-TEST(computeArea, computeArea)
+TEST(computeArea, computeArea_1)
 {
     Solution s;
     int A = -3, B = 0, C = 3, D = 4, E = 0, F = -1, G = 9, H = 2;

@@ -1,27 +1,28 @@
 /**
- * 
+ *
  * Copyright (c) 2018 NUAA Jiang Yang
- * 
+ *
  * @file
  * @author   姜阳 (j824544269@gmail.com)
  * @date     2018-09
- * @brief    
+ * @brief
  * @version  0.0.1
- * 
+ *
  * Last Modified:  2018-09-10
  * Modified By:    姜阳 (pokerpoke@qq.com)
- * 
+ *
  */
 #include "headers.h"
 
 class Solution
 {
-  public:
+public:
     int countPrimes(int n)
     {
         if (n <= 0)
             return 0;
-        bool prime[n] = {true};
+        //bool prime[n] = {true};
+        bool *prime = new bool[n];
         memset(prime, true, sizeof(prime));
 
         for (size_t i = 2; i < n; i++)

@@ -1,26 +1,33 @@
-# LeetCode
+# LeetCode C++/JS 本地调试环境
 
-## Solution ideas
+## 1. C++
 
-Under `doc` directory.
+### 简介
 
-## Debug
+- 适用于Ubuntu/WSL
+- @TODO: Run windows with vcpkg
+
+### 依赖
+
+- cmake
+- googletest
+
+### 用法
+
+生成模板
 
 ```shell
-./leetcode Solution
+./generate_template ${PROBLEM_NAME}
 ```
 
-## Generate template
+测试运行
 
 ```shell
-generate_template Solution
+./leetcode ${PROBLEM_NAME}
 ```
 
-## Compile
+## 2. JS用法
 
 ```shell
-mkdir build
-cd build
-cmake ..
-make
+node ${PROBLEM_NAME}
 ```

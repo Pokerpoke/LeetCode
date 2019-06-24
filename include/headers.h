@@ -8,8 +8,8 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-09-12
- * Modified By:    姜阳 (pokerpoke@qq.com)
+ * Last Modified:  2019-06-24
+ * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
 
@@ -27,6 +27,7 @@
 #include <unordered_map>
 #include <stack>
 #include <queue>
+#include <numeric>
 
 // c libraries
 #include <cctype>

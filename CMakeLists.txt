@@ -1,6 +1,6 @@
 project(LeetCode)
 
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.10)
 
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 enable_testing()

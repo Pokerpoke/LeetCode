@@ -1,14 +1,14 @@
 /**
  * 
- * Copyright (c) 2018 NUAA Jiang Yang
+ * Copyright (c) 2019 NUAA Jiang Yang
  * 
  * @file
- * @author   姜阳 (pokerpoke@qq.com)
+ * @author   Jiang Yang (pokerpoke@qq.com)
  * @date     2018-08
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-06-24
+ * Last Modified:  2019-07-22
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -43,5 +43,6 @@
 #include "bstree.h"
 
 using namespace std;
+using namespace LeetCode;
 
 #endif // !_HEADERS_H_

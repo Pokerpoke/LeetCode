@@ -24,7 +24,7 @@ public:
             auto bb = to_string(b);
             return aa + bb > bb + aa;
         });
-        return accumulate(nums.begin(), nums.end(), string(), [](string a, int b) {
+        return accumulate(nums.begin(), nums.end(), string(), [](string &a, int b) {
             if (a == "0")
                 return to_string(b);
             return move(a) + to_string(b);

@@ -1,14 +1,14 @@
 /**
  * 
- * Copyright (c) 2018 NUAA Jiang Yang
+ * Copyright (c) 2019 NUAA Jiang Yang
  * 
  * @file
- * @author   姜阳 (j824544269@gmail.com)
+ * @author   Jiang Yang (pokerpoke@qq.com)
  * @date     2018-09
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-09-07
- * Modified By:    姜阳 (j824544269@gmail.com)
+ * Last Modified:  2019-07-20
+ * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */

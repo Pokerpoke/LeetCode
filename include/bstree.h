@@ -1,14 +1,14 @@
 /**
  * 
- * Copyright (c) 2018 NUAA Jiang Yang
+ * Copyright (c) 2019 NUAA Jiang Yang
  * 
  * @file
- * @author   姜阳 (j824544269@gmail.com)
+ * @author   Jiang Yang (pokerpoke@qq.com)
  * @date     2018-09
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2018-11-13
+ * Last Modified:  2019-07-23
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -16,30 +16,82 @@
 #define _BSTREE_H_
 
 #include <vector>
+#include <iostream>
+#include <initializer_list>
+#include <queue>
+#include <list>
+namespace LeetCode
+{
 
 struct TreeNode
 {
     int val;
     TreeNode *left;
     TreeNode *right;
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x = NULL) : val(x), left(nullptr), right(nullptr) {}
 };
+
+void print_tree(TreeNode *root)
+{
+    using std::cout;
+    using std::endl;
+    if (root != nullptr)
+    {
+        cout << root->val << " ";
+        print_tree(root->left);
+        print_tree(root->right);
+    }
+    else
+        cout << "NULL ";
+}
+
+bool compare_tree(TreeNode *root1, TreeNode *root2)
+{
+    return true;
+}
 
 class Tree
 {
-  public:
-    Tree();
-    Tree(std::vector<int> &in);
-    ~Tree();
-
+public:
     TreeNode *root;
 
-    static void print_tree(TreeNode *root);
-    TreeNode *insert_ordered(const std::vector<int> &in, int l, int r);
-    void insert(const int &x);
-    void insert(const int &x, TreeNode *&parent);
-    bool is_empty();
-    void print();
-    void push(std::vector<int> &in);
+private:
+    std::queue<int> q;
+
+public:
+    Tree(std::initializer_list<int> il) : q(il)
+    {
+        if (q.size() <= 0)
+            return;
+        root = deserialize(q);
+    }
+
+    TreeNode *deserialize(std::queue<int> &in)
+    {
+        if (in.front() == NULL)
+            return nullptr;
+
+        TreeNode *temp = new TreeNode(in.front());
+        in.pop();
+        temp->left = deserialize(in);
+        temp->right = deserialize(in);
+
+        return temp;
+    }
+
+    ~Tree() {}
+
+    void print()
+    {
+        print_tree(root);
+        std::cout << std::endl;
+    }
+
+    bool operator==(const Tree &t2)
+    {
+        return compare_tree(root, t2.root);
+    }
 };
+} // namespace LeetCode
+
 #endif //!_BSTREE_H_

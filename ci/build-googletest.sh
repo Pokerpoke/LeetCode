@@ -12,14 +12,6 @@
 # Modified By:    Jiang Yang (pokerpoke@qq.com)
 # 
 ################################################################################
-
-# get scripts path
-SCRIPT_DIR=$(dirname $(readlink -f $0))
-cd ${SCRIPT_DIR}/..
-PROJECT_DIR=$(pwd)
-cd ${PROJECT_DIR}
-
-cd /tmp
 git clone https://github.com/google/googletest.git
 cd googletest
 mkdir build

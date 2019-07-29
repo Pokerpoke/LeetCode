@@ -13,4 +13,5 @@ include_directories(${GTEST_INCLUDE_DIR})
 
 add_subdirectory(include)
 
+add_subdirectory(test)
 add_subdirectory(src)

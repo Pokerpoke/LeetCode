@@ -39,6 +39,8 @@ TEST(test_tree, create)
 {
     Tree t1{1, 2, 3, 4, NULL, NULL, NULL};
     Tree t2{1, 2, 3};
+    Tree t3{1, 2, NULL, 3};
+    Tree t4{1, NULL};
 }
 
 TEST(test_tree, print)

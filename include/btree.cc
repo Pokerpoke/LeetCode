@@ -71,8 +71,13 @@ Tree::~Tree()
 
 TreeNode *Tree::deserialize(std::queue<int> &in)
 {
-    if (in.empty() || in.front() == NULL)
+    if (in.empty())
         return nullptr;
+    if (in.front() == NULL)
+    {
+        in.pop();
+        return nullptr;
+    }
 
     TreeNode *temp = new TreeNode(in.front());
     in.pop();

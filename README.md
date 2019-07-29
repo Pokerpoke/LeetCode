@@ -1,5 +1,7 @@
 # LeetCode C++/JS 本地调试环境
 
+[![Build Status](https://travis-ci.com/Pokerpoke/LeetCode.svg?branch=master)](https://travis-ci.com/Pokerpoke/LeetCode)
+
 ## 1. C++
 
 ### 简介

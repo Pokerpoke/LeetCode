@@ -1,14 +1,21 @@
 language: cpp
+
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+
 before_iunstall: 
-- git clone https://github.com/google/googletest.git && \
-  cd googletest && \
-  mkdir build && \
-  cd build && \
-  cmake .. && \
-  make -j8 && \
-  sudo make install
+  - git clone https://github.com/google/googletest.git && \
+    cd googletest && \
+    mkdir build && \
+    cd build && \
+    cmake .. && \
+    make -j8 && \
+    sudo make install
+
 scripts:
-- mkdir build && cd build
-- cmake ..
-- make
-- make test
+  - mkdir build && cd build
+  - cmake ..
+  - make
+  - make test

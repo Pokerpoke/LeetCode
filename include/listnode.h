@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-22
+ * Last Modified:  2019-07-29
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -28,70 +28,24 @@ struct ListNode
     ListNode(int x = 0, ListNode *p = nullptr) : val(x), next(nullptr){};
 };
 
-void print_list(ListNode *head)
-{
-    while (head != nullptr)
-    {
-        std::cout << head->val << " ";
-        head = head->next;
-    }
-    std::cout << std::endl;
-}
-
-bool compare_list(ListNode *l1, ListNode *l2)
-{
-    while (l1 != nullptr && l2 != nullptr && l1->val == l2->val)
-    {
-        l1 = l1->next;
-        l2 = l2->next;
-    }
-    return l1 == l2 ? true : false;
-}
+void print_list(ListNode *head);
+bool compare_list(ListNode *l1, ListNode *l2);
 
 class List
 {
 public:
-    ListNode *head, *tail;
-    int pos;
+    ListNode *head;
 
-    List()
-    {
-        head = nullptr;
-    };
+private:
+    ListNode *tail;
 
-    List(std::initializer_list<int> l)
-        : head(nullptr), tail(nullptr)
-    {
-        for (auto it : l)
-            insert(it);
-    };
-
-    ~List(){};
-
-    void insert(int x)
-    {
-        if (head == nullptr)
-            head = tail = new ListNode(x);
-        else
-        {
-            ListNode *p = new ListNode(x);
-            tail->next = p;
-            tail = p;
-            tail->next = nullptr;
-        }
-    };
-
-    void print()
-    {
-        print_list(this->head);
-    }
-
-    bool operator==(const List &l1) const
-    {
-        // ListNode *head1 = this->head;
-        // ListNode *head2 = l1.head;
-        return compare_list(this->head, l1.head);
-    }
+public:
+    List();
+    List(std::initializer_list<int> l);
+    ~List();
+    void insert(int x);
+    void print();
+    bool operator==(const List &l1) const;
 };
 } // namespace LeetCode
 

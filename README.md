@@ -14,9 +14,13 @@
 
 #### 1. Ubuntu/WSL
 
+CMake
+
 ```shell
-sudo apt install cmake googletest
+sudo apt install cmake
 ```
+
+Ubuntu源中提供的GoogleTest源不包含CMake集成，请从[google/googletest](https://github.com/google/googletest)编译安装。
 
 #### 2. Windows
 

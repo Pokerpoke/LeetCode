@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-22
+ * Last Modified:  2019-07-29
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,18 +17,41 @@
 class Solution
 {
 public:
-    bool test_listnode(string s)
+    bool test_listnode(vector<int> A)
     {
-        List l1{1, 2, 3, NULL, NULL, 4, NULL, NULL, 5, NULL, NULL};
+        List l1;
+        for (auto it : A)
+            l1.insert(it);
         l1.print();
         return true;
     }
 };
 
-TEST(test_listnode, test_listnode_1)
+TEST(test_listnode, create)
+{
+    List l1{1, 2, 3};
+}
+
+TEST(test_listnode, print)
+{
+    List l1{1, 2, 3};
+    l1.print();
+}
+
+TEST(test_listnode, compare)
+{
+    List l1{1, 2, 3, 4};
+    List l2{1, 2, 3, 4};
+    List l3{1, 2, 3, 5};
+    EXPECT_TRUE(l1 == l2);
+    EXPECT_FALSE(l1 == l3);
+}
+
+TEST(test_listnode, solution)
 {
     Solution s;
-    EXPECT_TRUE(s.test_listnode(""));
+    vector<int> in = {1, 2, 3};
+    s.test_listnode(in);
 }
 
 int main(int argc, char **argv)

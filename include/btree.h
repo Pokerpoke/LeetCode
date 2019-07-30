@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-29
+ * Last Modified:  2019-07-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -33,7 +33,7 @@ struct TreeNode
 };
 
 void print_tree(TreeNode *root);
-bool compare_tree(TreeNode *root1, TreeNode *root2);
+bool is_same_tree(TreeNode *root1, TreeNode *root2);
 
 class Tree
 {

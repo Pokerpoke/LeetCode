@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-29
+ * Last Modified:  2019-07-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -20,25 +20,42 @@ void print_tree(TreeNode *root)
 {
     using std::cout;
     using std::endl;
-    if (root != nullptr)
+    using std::queue;
+
+    if (root == nullptr)
     {
-        cout << root->val << " ";
-        print_tree(root->left);
-        print_tree(root->right);
+        cout << "NULL" << endl;
+        return;
     }
-    else
-        cout << "NULL ";
+    queue<TreeNode *> root_ptrs;
+
+    root_ptrs.push(root);
+
+    while (!root_ptrs.empty())
+    {
+        TreeNode *temp = root_ptrs.front();
+        if (temp == nullptr)
+            cout << "NULL ";
+        else
+            cout << temp->val << " ";
+        if (temp->left != nullptr)
+            root_ptrs.push(temp->left);
+        if (temp->right != nullptr)
+            root_ptrs.push(temp->right);
+        root_ptrs.pop();
+    }
+    cout << endl;
 }
 
-bool compare_tree(TreeNode *root1, TreeNode *root2)
+bool is_same_tree(TreeNode *root1, TreeNode *root2)
 {
     if (root1 == nullptr && root2 == nullptr)
         return true;
     else if (root1 == nullptr || root2 == nullptr)
         return false;
     else if (root1->val == root2->val)
-        return (compare_tree(root1->left, root2->left) &&
-                compare_tree(root1->right, root2->right));
+        return (is_same_tree(root1->left, root2->left) &&
+                is_same_tree(root1->right, root2->right));
     return false;
 }
 
@@ -46,7 +63,7 @@ Tree::Tree(std::initializer_list<int> il) : q(il)
 {
     if (q.empty())
         return;
-    this->root = deserialize(q);
+    root = deserialize(q);
 }
 
 void delete_root_helper(TreeNode *root)
@@ -71,30 +88,66 @@ Tree::~Tree()
 
 TreeNode *Tree::deserialize(std::queue<int> &in)
 {
-    if (in.empty())
-        return nullptr;
-    if (in.front() == NULL)
-    {
-        in.pop();
-        return nullptr;
-    }
+    using std::queue;
 
+    queue<TreeNode *> root_ptrs;
+    if (in.empty() || in.front() == NULL)
+        return nullptr;
     TreeNode *temp = new TreeNode(in.front());
+    TreeNode *ret = temp;
     in.pop();
-    temp->left = deserialize(in);
-    temp->right = deserialize(in);
+    root_ptrs.push(temp);
+    while (!in.empty())
+    {
+        temp = root_ptrs.front();
+        if (in.front() == NULL)
+            temp->left = nullptr;
+        else
+            temp->left = new TreeNode(in.front());
+        in.pop();
+        if (in.empty())
+            break;
+        if (in.front() == NULL)
+            temp->right = nullptr;
+        else
+            temp->right = new TreeNode(in.front());
+        in.pop();
 
-    return temp;
+        if (temp->left != nullptr)
+            root_ptrs.push(temp->left);
+        if (temp->right != nullptr)
+            root_ptrs.push(temp->right);
+
+        root_ptrs.pop();
+    }
+    return ret;
 }
+
+// TreeNode *Tree::deserialize(std::queue<int> &in)
+// {
+//     if (in.empty())
+//         return nullptr;
+//     if (in.front() == NULL)
+//     {
+//         in.pop();
+//         return nullptr;
+//     }
+
+//     TreeNode *temp = new TreeNode(in.front());
+//     in.pop();
+//     temp->left = deserialize(in);
+//     temp->right = deserialize(in);
+
+//     return temp;
+// }
 
 void Tree::print()
 {
-    print_tree(this->root);
-    std::cout << std::endl;
+    print_tree(root);
 }
 
 bool Tree::operator==(const Tree &t2) const
 {
-    return compare_tree(this->root, t2.root);
+    return is_same_tree(root, t2.root);
 }
 } // namespace LeetCode

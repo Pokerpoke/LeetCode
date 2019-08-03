@@ -57,7 +57,7 @@ TEST(addTwoNumbers_2, addTwoNumbers_2_1)
     List l1{2, 4, 3};
     List l2{5, 6, 4};
     List ans{7, 0, 8};
-    EXPECT_TRUE(compare_list(s.addTwoNumbers_2(l1.head, l2.head), ans.head));
+    EXPECT_TRUE(is_same_list(s.addTwoNumbers_2(l1.head, l2.head), ans.head));
 }
 
 TEST(addTwoNumbers_2, addTwoNumbers_2_2)
@@ -66,7 +66,7 @@ TEST(addTwoNumbers_2, addTwoNumbers_2_2)
     List l1{0, 1};
     List l2{0, 1, 2};
     List ans{0, 2, 2};
-    EXPECT_TRUE(compare_list(s.addTwoNumbers_2(l1.head, l2.head), ans.head));
+    EXPECT_TRUE(is_same_list(s.addTwoNumbers_2(l1.head, l2.head), ans.head));
 }
 TEST(addTwoNumbers_2, addTwoNumbers_2_3)
 {
@@ -74,7 +74,7 @@ TEST(addTwoNumbers_2, addTwoNumbers_2_3)
     List l1{};
     List l2{0, 1};
     List ans{0, 1};
-    EXPECT_TRUE(compare_list(s.addTwoNumbers_2(l1.head, l2.head), ans.head));
+    EXPECT_TRUE(is_same_list(s.addTwoNumbers_2(l1.head, l2.head), ans.head));
 }
 TEST(addTwoNumbers_2, addTwoNumbers_2_4)
 {
@@ -82,7 +82,7 @@ TEST(addTwoNumbers_2, addTwoNumbers_2_4)
     List l1{9, 9};
     List l2{1};
     List ans{0, 0, 1};
-    EXPECT_TRUE(compare_list(s.addTwoNumbers_2(l1.head, l2.head), ans.head));
+    EXPECT_TRUE(is_same_list(s.addTwoNumbers_2(l1.head, l2.head), ans.head));
 }
 
 int main(int argc, char **argv)

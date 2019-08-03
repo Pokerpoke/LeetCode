@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-29
+ * Last Modified:  2019-08-03
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -26,7 +26,7 @@ void print_list(ListNode *head)
     std::cout << std::endl;
 }
 
-bool compare_list(ListNode *l1, ListNode *l2)
+bool is_same_list(ListNode *l1, ListNode *l2)
 {
     while (l1 != nullptr && l2 != nullptr && l1->val == l2->val)
     {
@@ -80,6 +80,6 @@ void List::print()
 
 bool List::operator==(const List &l1) const
 {
-    return compare_list(this->head, l1.head);
+    return is_same_list(this->head, l1.head);
 }
 } // namespace LeetCode

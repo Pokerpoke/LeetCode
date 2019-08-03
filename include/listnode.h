@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-29
+ * Last Modified:  2019-08-03
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -29,7 +29,7 @@ struct ListNode
 };
 
 void print_list(ListNode *head);
-bool compare_list(ListNode *l1, ListNode *l2);
+bool is_same_list(ListNode *l1, ListNode *l2);
 
 class List
 {

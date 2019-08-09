@@ -30,7 +30,7 @@ public:
                 return true;
         }
         return false;
-    }`
+    }
 };
 
 TEST(increasingTriplet_334, increasingTriplet_334_1)
@@ -52,7 +52,7 @@ TEST(increasingTriplet_334, increasingTriplet_334_2)
 TEST(increasingTriplet_334, increasingTriplet_334_3)
 {
     Solution s;
-    vector<int> in = {1,1,1,1,1,1,1,1,1,1,1,1};
+    vector<int> in = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     bool ans = false;
     EXPECT_EQ(s.increasingTriplet_334(in), ans);
 }

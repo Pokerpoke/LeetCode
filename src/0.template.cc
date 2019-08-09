@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-05-21
+ * Last Modified:  2019-08-09
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,17 +17,18 @@
 class Solution
 {
 public:
-    bool isValid(string s)
+    int isValid(vector<int> nums)
     {
-        return true;
+        return 1;
     }
 };
 
 TEST(isValid, isValid_1)
 {
     Solution s;
-    EXPECT_TRUE(s.isValid(""));
-    EXPECT_EQ(s.isValid(""), true);
+    vector<int> in = {1, 2, 3};
+    int ans = 1;
+    EXPECT_EQ(s.isValid(in), ans);
 }
 
 int main(int argc, char **argv)

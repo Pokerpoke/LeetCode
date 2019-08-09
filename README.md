@@ -14,7 +14,7 @@
 - cmake
 - googletest
 
-#### 1. Ubuntu/WSL
+#### 1.1. Ubuntu/WSL
 
 CMake
 
@@ -24,7 +24,7 @@ sudo apt install cmake
 
 Ubuntu源中提供的GoogleTest源不包含CMake集成，请从[google/googletest](https://github.com/google/googletest)编译安装。
 
-#### 2. Windows
+#### 1.2. Windows
 
 从[CMake官网](https://cmake.org/download/)下载安装CMake。
 
@@ -38,7 +38,7 @@ Ubuntu源中提供的GoogleTest源不包含CMake集成，请从[google/googletes
 
 生成模板，将会在src目录下生成相应模板，根据题目进行修改即可。
 
-因为C++不支持数字打头的函数名，直接用题目中的solution名字作为problem_name吧。（或许以后加上可以文件名与solution名字不同）
+因为C++不支持数字打头的函数名，那就添加一个后缀，solution_NO.名字作为problem_name吧。
 
 ```shell
 ./generate_template ${PROBLEM_NAME}

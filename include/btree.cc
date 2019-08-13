@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-30
+ * Last Modified:  2019-08-13
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -122,24 +122,6 @@ TreeNode *Tree::deserialize(std::queue<int> &in)
     }
     return ret;
 }
-
-// TreeNode *Tree::deserialize(std::queue<int> &in)
-// {
-//     if (in.empty())
-//         return nullptr;
-//     if (in.front() == NULL)
-//     {
-//         in.pop();
-//         return nullptr;
-//     }
-
-//     TreeNode *temp = new TreeNode(in.front());
-//     in.pop();
-//     temp->left = deserialize(in);
-//     temp->right = deserialize(in);
-
-//     return temp;
-// }
 
 void Tree::print()
 {

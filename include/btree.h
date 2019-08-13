@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-30
+ * Last Modified:  2019-08-13
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -29,7 +29,7 @@ struct TreeNode
     int val;
     TreeNode *left;
     TreeNode *right;
-    TreeNode(int x = NULL) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x = 0) : val(x), left(nullptr), right(nullptr) {}
 };
 
 void print_tree(TreeNode *root);

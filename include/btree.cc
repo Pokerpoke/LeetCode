@@ -91,7 +91,7 @@ TreeNode *Tree::deserialize(std::queue<int> &in)
     using std::queue;
 
     queue<TreeNode *> root_ptrs;
-    if (in.empty() || in.front() == NULL)
+    if (in.empty() || in.front() == 0)
         return nullptr;
     TreeNode *temp = new TreeNode(in.front());
     TreeNode *ret = temp;
@@ -100,14 +100,14 @@ TreeNode *Tree::deserialize(std::queue<int> &in)
     while (!in.empty())
     {
         temp = root_ptrs.front();
-        if (in.front() == NULL)
+        if (in.front() == 0)
             temp->left = nullptr;
         else
             temp->left = new TreeNode(in.front());
         in.pop();
         if (in.empty())
             break;
-        if (in.front() == NULL)
+        if (in.front() == 0)
             temp->right = nullptr;
         else
             temp->right = new TreeNode(in.front());

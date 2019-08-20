@@ -48,7 +48,7 @@ public:
     vector<int> sortArray_912_quick(vector<int> &nums)
     {
         int n = nums.size();
-        quick_sort(nums, 0, n);
+        quick_sort(nums, 0, n - 1);
         return nums;
     }
 };

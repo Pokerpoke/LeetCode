@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-09
+ * Last Modified:  2019-08-20
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    int isValid(vector<int> nums)
+    int isValid(vector<int> &nums)
     {
         return 1;
     }

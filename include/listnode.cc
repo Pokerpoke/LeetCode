@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-03
+ * Last Modified:  2019-08-26
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -20,7 +20,9 @@ void print_list(ListNode *head)
 {
     while (head != nullptr)
     {
-        std::cout << head->val << " ";
+        std::cout << head->val;
+        if (head->next != nullptr)
+            std::cout << "->";
         head = head->next;
     }
     std::cout << std::endl;

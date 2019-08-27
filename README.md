@@ -7,32 +7,11 @@
 ### 简介
 
 - 适用于Ubuntu/WSL
-- @TODO: Run windows with vcpkg
 
 ### 依赖
 
 - cmake
 - googletest
-
-#### 1.1. Ubuntu/WSL
-
-CMake
-
-```shell
-sudo apt install cmake
-```
-
-Ubuntu源中提供的GoogleTest源不包含CMake集成，请从[google/googletest](https://github.com/google/googletest)编译安装。
-
-#### 1.2. Windows
-
-从[CMake官网](https://cmake.org/download/)下载安装CMake。
-
-根据[microsoft/vcpkg](https://github.com/microsoft/vcpkg)上的步骤安装vcpkg
-
-```powershell
-.\vcpkg install googletest
-```
 
 ### 用法
 

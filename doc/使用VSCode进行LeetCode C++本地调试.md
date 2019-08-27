@@ -135,6 +135,8 @@ int main(int argc, char **argv)
 
 如果修改VSCode中的快捷键，即可更加快速地进行调试。
 
+![cmake keyboard shortcuts](https://raw.githubusercontent.com/Pokerpoke/Blog-images/master/%E4%BD%BF%E7%94%A8VSCode%E8%BF%9B%E8%A1%8CLeetCode%20C%2B%2B%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95/cmake-keyboard-shortcuts.png)
+
 ## 5.可调试使用函数
 
 由于使用Googletest，没法使用断点的方式进行调试，所以封装了几个简单的调试用函数。

@@ -6,7 +6,7 @@
 
 **适用于Ubuntu/WSL**
 
-详细用法参见[使用VSCode进行LeetCode C++本地调试](doc/使用VSCode进行LeetCode\ C++本地调试.md)
+详细用法参见[使用VSCode进行LeetCode C++本地调试](./doc/使用VSCode进行LeetCode\ C++本地调试.md)
 
 ### 依赖
 

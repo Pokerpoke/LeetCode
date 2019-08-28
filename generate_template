@@ -1,16 +1,16 @@
 #!/bin/bash
 ################################################################################
-# 
+#
 # Copyright (c) 2019 NUAA AeroLab
-# 
+#
 # @author   Jiang Yang (pokerpoke@qq.com)
 # @date     2019-05
-# @brief    
+# @brief
 # @version  0.0.1
-# 
+#
 # Last Modified:  2019-05-21
 # Modified By:    Jiang Yang (pokerpoke@qq.com)
-# 
+#
 ################################################################################
 set -e
 
@@ -25,9 +25,11 @@ if [ ! -n "$1" ]; then
     exit 1
 else
     SOLUTION=$1
+    ID=$(echo ${SOLUTION} | sed 's/.[^.]*$//g')
+    SOLUTION=$(echo ${SOLUTION} | sed 's/^.*\.//g')
 fi
 
-cp -f ${CMAKE_SOURCE_DIR}/src/0.template.cc ${CMAKE_SOURCE_DIR}/src/${SOLUTION}.cc
+cp -f ${CMAKE_SOURCE_DIR}/src/0.template.cc ${CMAKE_SOURCE_DIR}/src/${ID}.${SOLUTION}.cc
 
-sed -i "s/isValid/`expr ${SOLUTION}`/g" \
- ${CMAKE_SOURCE_DIR}/src/${SOLUTION}.cc
+sed -i "s/isValid/$(expr ${SOLUTION})/g" \
+    ${CMAKE_SOURCE_DIR}/src/${ID}.${SOLUTION}.cc

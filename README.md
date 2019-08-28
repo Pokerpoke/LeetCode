@@ -13,9 +13,13 @@
 - cmake
 - googletest
 
-### 用法
+### 创建新git分支
 
-生成模板，将会在src目录下生成相应模板，根据题目进行修改即可。
+项目为了不污染master分支，解答放到了solutions分支下，如果直接fork过去可以直接在master分支上提交题解，单独创建solutions分支也可以。
+
+### 生成模板并调试运行
+
+通过复制或者提供的脚步生成模板，将会在src目录下生成相应模板，根据题目进行修改相关函数名称即可。
 
 因为C++不支持数字打头的函数名，那就添加一个后缀，${PROBLEM_NAME}_{ID}.名字作为solution_name吧。
 
@@ -28,3 +32,7 @@
 ```shell
 ./leetcode ${PROBLEM_NAME}_{ID}
 ```
+
+### CI
+
+在fork的仓库中可以直接启用TravisCI功能。

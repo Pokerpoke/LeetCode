@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-20
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    int minCostClimbingStairs_746(vector<int> &cost)
+    int minCostClimbingStairs(vector<int> &cost)
     {
         int n = cost.size();
         vector<int> dp(n + 1, 0);
@@ -29,20 +29,20 @@ public:
     }
 };
 
-TEST(minCostClimbingStairs_746, minCostClimbingStairs_746_1)
+TEST(minCostClimbingStairs, minCostClimbingStairs_1)
 {
     Solution s;
     vector<int> in = {10, 15, 20};
     int ans = 15;
-    EXPECT_EQ(s.minCostClimbingStairs_746(in), ans);
+    EXPECT_EQ(s.minCostClimbingStairs(in), ans);
 }
 
-TEST(minCostClimbingStairs_746, minCostClimbingStairs_746_2)
+TEST(minCostClimbingStairs, minCostClimbingStairs_2)
 {
     Solution s;
     vector<int> in = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
     int ans = 6;
-    EXPECT_EQ(s.minCostClimbingStairs_746(in), ans);
+    EXPECT_EQ(s.minCostClimbingStairs(in), ans);
 }
 
 int main(int argc, char **argv)

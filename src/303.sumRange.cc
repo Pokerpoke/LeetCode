@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-02
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    bool sumRange_303(string s)
+    bool sumRange(string s)
     {
         return true;
     }
@@ -44,7 +44,7 @@ public:
     }
 };
 
-TEST(sumRange_303, sumRange_303_1)
+TEST(sumRange, sumRange_1)
 {
     vector<int> nums{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     NumArray *obj = new NumArray(nums);

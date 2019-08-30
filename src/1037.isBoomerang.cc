@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-21
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    bool isBoomerang_1037(vector<vector<int>> &points)
+    bool isBoomerang(vector<vector<int>> &points)
     {
         int x1 = points[1][0] - points[0][0];
         int x2 = points[2][0] - points[0][0];
@@ -27,24 +27,24 @@ public:
     }
 };
 
-TEST(isBoomerang_1037, isBoomerang_1037_1)
+TEST(isBoomerang, isBoomerang_1)
 {
     Solution s;
     vector<vector<int>> in = {{1, 1},
                               {2, 3},
                               {3, 2}};
     bool ans = true;
-    EXPECT_EQ(s.isBoomerang_1037(in), ans);
+    EXPECT_EQ(s.isBoomerang(in), ans);
 }
 
-TEST(isBoomerang_1037, isBoomerang_1037_2)
+TEST(isBoomerang, isBoomerang_2)
 {
     Solution s;
     vector<vector<int>> in = {{1, 1},
                               {2, 2},
                               {3, 3}};
     bool ans = false;
-    EXPECT_EQ(s.isBoomerang_1037(in), ans);
+    EXPECT_EQ(s.isBoomerang(in), ans);
 }
 
 int main(int argc, char **argv)

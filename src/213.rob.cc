@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-02
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    int rob_213(vector<int> &nums)
+    int rob(vector<int> &nums)
     {
         int n = nums.size();
         if (n == 1)
@@ -32,32 +32,32 @@ public:
     }
 };
 
-TEST(rob_213, rob_213_1)
+TEST(rob, rob_1)
 {
     Solution s;
     vector<int> in{2, 3, 2};
-    EXPECT_EQ(s.rob_213(in), 3);
+    EXPECT_EQ(s.rob(in), 3);
 }
 
-TEST(rob_213, rob_213_2)
+TEST(rob, rob_2)
 {
     Solution s;
     vector<int> in{1, 2, 3, 1};
-    EXPECT_EQ(s.rob_213(in), 4);
+    EXPECT_EQ(s.rob(in), 4);
 }
 
-TEST(rob_213, rob_213_3)
+TEST(rob, rob_3)
 {
     Solution s;
     vector<int> in;
-    EXPECT_EQ(s.rob_213(in), 0);
+    EXPECT_EQ(s.rob(in), 0);
 }
 
-TEST(rob_213, rob_213_4)
+TEST(rob, rob_4)
 {
     Solution s;
     vector<int> in{1};
-    EXPECT_EQ(s.rob_213(in), 1);
+    EXPECT_EQ(s.rob(in), 1);
 }
 
 int main(int argc, char **argv)

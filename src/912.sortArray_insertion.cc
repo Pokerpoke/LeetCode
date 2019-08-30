@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-20
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    vector<int> sortArray_912_insertion(vector<int> &nums)
+    vector<int> sortArray_insertion(vector<int> &nums)
     {
         int n = nums.size();
         for (int i = 1; i < n; i++)
@@ -37,36 +37,36 @@ public:
     }
 };
 
-TEST(sortArray_912_insertion, sortArray_912_insertion_1)
+TEST(sortArray_insertion, sortArray_insertion_1)
 {
     Solution s;
     vector<int> in = {5, 2, 3, 1};
     vector<int> ans = {1, 2, 3, 5};
-    EXPECT_EQ(s.sortArray_912_insertion(in), ans);
+    EXPECT_EQ(s.sortArray_insertion(in), ans);
 }
 
-TEST(sortArray_912_insertion, sortArray_912_insertion_2)
+TEST(sortArray_insertion, sortArray_insertion_2)
 {
     Solution s;
     vector<int> in = {5, 1, 1, 2, 0, 0};
     vector<int> ans = {0, 0, 1, 1, 2, 5};
-    EXPECT_EQ(s.sortArray_912_insertion(in), ans);
+    EXPECT_EQ(s.sortArray_insertion(in), ans);
 }
 
-TEST(sortArray_912_insertion, sortArray_912_insertion_3)
+TEST(sortArray_insertion, sortArray_insertion_3)
 {
     Solution s;
     vector<int> in = {0};
     vector<int> ans = {0};
-    EXPECT_EQ(s.sortArray_912_insertion(in), ans);
+    EXPECT_EQ(s.sortArray_insertion(in), ans);
 }
 
-TEST(sortArray_912_insertion, sortArray_912_insertion_4)
+TEST(sortArray_insertion, sortArray_insertion_4)
 {
     Solution s;
     vector<int> in = {};
     vector<int> ans = {};
-    EXPECT_EQ(s.sortArray_912_insertion(in), ans);
+    EXPECT_EQ(s.sortArray_insertion(in), ans);
 }
 
 int main(int argc, char **argv)

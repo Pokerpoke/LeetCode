@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-26
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    int lengthOfLongestSubstring_3(string s)
+    int lengthOfLongestSubstring(string s)
     {
         int left = 0, right = 0, n = s.size(), res = 0;
         unordered_set<char> hash_set;
@@ -39,44 +39,44 @@ public:
     }
 };
 
-TEST(lengthOfLongestSubstring_3, lengthOfLongestSubstring_3_1)
+TEST(lengthOfLongestSubstring, lengthOfLongestSubstring_1)
 {
     Solution s;
     string in = "abcabcbb";
     int ans = 3;
-    EXPECT_EQ(s.lengthOfLongestSubstring_3(in), ans);
+    EXPECT_EQ(s.lengthOfLongestSubstring(in), ans);
 }
 
-TEST(lengthOfLongestSubstring_3, lengthOfLongestSubstring_3_2)
+TEST(lengthOfLongestSubstring, lengthOfLongestSubstring_2)
 {
     Solution s;
     string in = "bbbbb";
     int ans = 1;
-    EXPECT_EQ(s.lengthOfLongestSubstring_3(in), ans);
+    EXPECT_EQ(s.lengthOfLongestSubstring(in), ans);
 }
 
-TEST(lengthOfLongestSubstring_3, lengthOfLongestSubstring_3_3)
+TEST(lengthOfLongestSubstring, lengthOfLongestSubstring_3)
 {
     Solution s;
     string in = "pwwkew";
     int ans = 3;
-    EXPECT_EQ(s.lengthOfLongestSubstring_3(in), ans);
+    EXPECT_EQ(s.lengthOfLongestSubstring(in), ans);
 }
 
-TEST(lengthOfLongestSubstring_3, lengthOfLongestSubstring_3_4)
+TEST(lengthOfLongestSubstring, lengthOfLongestSubstring_4)
 {
     Solution s;
     string in = "aab";
     int ans = 2;
-    EXPECT_EQ(s.lengthOfLongestSubstring_3(in), ans);
+    EXPECT_EQ(s.lengthOfLongestSubstring(in), ans);
 }
 
-TEST(lengthOfLongestSubstring_3, lengthOfLongestSubstring_3_5)
+TEST(lengthOfLongestSubstring, lengthOfLongestSubstring_5)
 {
     Solution s;
     string in = "dvdf";
     int ans = 3;
-    EXPECT_EQ(s.lengthOfLongestSubstring_3(in), ans);
+    EXPECT_EQ(s.lengthOfLongestSubstring(in), ans);
 }
 
 int main(int argc, char **argv)

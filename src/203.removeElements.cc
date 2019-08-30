@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-06
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    ListNode *removeElements_203(ListNode *head, int val)
+    ListNode *removeElements(ListNode *head, int val)
     {
         if (head == nullptr)
             return nullptr;
@@ -43,49 +43,49 @@ public:
     }
 };
 
-TEST(removeElements_203, removeElements_203_1)
+TEST(removeElements, removeElements_1)
 {
     Solution s;
     List in = {1, 2, 6, 3, 4, 5, 6};
     List ans = {1, 2, 3, 4, 5};
     int val = 6;
-    EXPECT_TRUE(is_same_list(s.removeElements_203(in.head, val), ans.head));
+    EXPECT_TRUE(is_same_list(s.removeElements(in.head, val), ans.head));
 }
 
-TEST(removeElements_203, removeElements_203_2)
+TEST(removeElements, removeElements_2)
 {
     Solution s;
     List in = {};
     List ans = {};
     int val = 6;
-    EXPECT_TRUE(is_same_list(s.removeElements_203(in.head, val), ans.head));
+    EXPECT_TRUE(is_same_list(s.removeElements(in.head, val), ans.head));
 }
 
-TEST(removeElements_203, removeElements_203_3)
+TEST(removeElements, removeElements_3)
 {
     Solution s;
     List in = {1, 1};
     List ans = {};
     int val = 1;
-    EXPECT_TRUE(is_same_list(s.removeElements_203(in.head, val), ans.head));
+    EXPECT_TRUE(is_same_list(s.removeElements(in.head, val), ans.head));
 }
 
-TEST(removeElements_203, removeElements_203_4)
+TEST(removeElements, removeElements_4)
 {
     Solution s;
     List in = {1, 2, 6, 3, 4, 5, 6};
     List ans = {2, 6, 3, 4, 5, 6};
     int val = 1;
-    EXPECT_TRUE(is_same_list(s.removeElements_203(in.head, val), ans.head));
+    EXPECT_TRUE(is_same_list(s.removeElements(in.head, val), ans.head));
 }
 
-TEST(removeElements_203, removeElements_203_5)
+TEST(removeElements, removeElements_5)
 {
     Solution s;
     List in = {1, 2, 2, 2, 2, 2, 6};
     List ans = {1, 6};
     int val = 2;
-    EXPECT_TRUE(is_same_list(s.removeElements_203(in.head, val), ans.head));
+    EXPECT_TRUE(is_same_list(s.removeElements(in.head, val), ans.head));
 }
 
 int main(int argc, char **argv)

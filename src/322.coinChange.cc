@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-09
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    int coinChange_322(vector<int> &coins, int amount)
+    int coinChange(vector<int> &coins, int amount)
     {
         vector<int> dp(amount + 1, amount + 1);
         dp[0] = 0;
@@ -33,22 +33,22 @@ public:
     }
 };
 
-TEST(coinChange_322, coinChange_322_1)
+TEST(coinChange, coinChange_1)
 {
     Solution s;
     vector<int> in = {1, 2, 5};
     int amount = 11;
     int ans = 3;
-    EXPECT_EQ(s.coinChange_322(in, amount), ans);
+    EXPECT_EQ(s.coinChange(in, amount), ans);
 }
 
-TEST(coinChange_322, coinChange_322_2)
+TEST(coinChange, coinChange_2)
 {
     Solution s;
     vector<int> in = {2};
     int amount = 3;
     int ans = -1;
-    EXPECT_EQ(s.coinChange_322(in, amount), ans);
+    EXPECT_EQ(s.coinChange(in, amount), ans);
 }
 
 int main(int argc, char **argv)

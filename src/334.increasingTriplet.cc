@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-09
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    bool increasingTriplet_334(vector<int> &nums)
+    bool increasingTriplet(vector<int> &nums)
     {
         int one = INT_MAX, two = INT_MAX;
         for (auto num : nums)
@@ -33,28 +33,28 @@ public:
     }
 };
 
-TEST(increasingTriplet_334, increasingTriplet_334_1)
+TEST(increasingTriplet, increasingTriplet_1)
 {
     Solution s;
     vector<int> in = {1, 2, 3, 4, 5};
     bool ans = true;
-    EXPECT_EQ(s.increasingTriplet_334(in), ans);
+    EXPECT_EQ(s.increasingTriplet(in), ans);
 }
 
-TEST(increasingTriplet_334, increasingTriplet_334_2)
+TEST(increasingTriplet, increasingTriplet_2)
 {
     Solution s;
     vector<int> in = {5, 4, 3, 2, 1};
     bool ans = false;
-    EXPECT_EQ(s.increasingTriplet_334(in), ans);
+    EXPECT_EQ(s.increasingTriplet(in), ans);
 }
 
-TEST(increasingTriplet_334, increasingTriplet_334_3)
+TEST(increasingTriplet, increasingTriplet_3)
 {
     Solution s;
     vector<int> in = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     bool ans = false;
-    EXPECT_EQ(s.increasingTriplet_334(in), ans);
+    EXPECT_EQ(s.increasingTriplet(in), ans);
 }
 
 int main(int argc, char **argv)

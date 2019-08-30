@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-24
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    bool isPowerOfTwo_231(int n)
+    bool isPowerOfTwo(int n)
     {
         if (n <= 0)
             return false;
@@ -25,36 +25,36 @@ public:
     }
 };
 
-TEST(isPowerOfTwo_231, isPowerOfTwo_231_1)
+TEST(isPowerOfTwo, isPowerOfTwo_1)
 {
     Solution s;
     int in = 1;
     bool ans = true;
-    EXPECT_EQ(s.isPowerOfTwo_231(in), ans);
+    EXPECT_EQ(s.isPowerOfTwo(in), ans);
 }
 
-TEST(isPowerOfTwo_231, isPowerOfTwo_231_2)
+TEST(isPowerOfTwo, isPowerOfTwo_2)
 {
     Solution s;
     int in = 16;
     bool ans = true;
-    EXPECT_EQ(s.isPowerOfTwo_231(in), ans);
+    EXPECT_EQ(s.isPowerOfTwo(in), ans);
 }
 
-TEST(isPowerOfTwo_231, isPowerOfTwo_231_3)
+TEST(isPowerOfTwo, isPowerOfTwo_3)
 {
     Solution s;
     int in = 218;
     bool ans = false;
-    EXPECT_EQ(s.isPowerOfTwo_231(in), ans);
+    EXPECT_EQ(s.isPowerOfTwo(in), ans);
 }
 
-TEST(isPowerOfTwo_231, isPowerOfTwo_231_4)
+TEST(isPowerOfTwo, isPowerOfTwo_4)
 {
     Solution s;
     int in = 0;
     bool ans = false;
-    EXPECT_EQ(s.isPowerOfTwo_231(in), ans);
+    EXPECT_EQ(s.isPowerOfTwo(in), ans);
 }
 
 int main(int argc, char **argv)

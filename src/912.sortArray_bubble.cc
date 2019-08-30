@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-20
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    vector<int> sortArray_912_bubble(vector<int> &nums)
+    vector<int> sortArray_bubble(vector<int> &nums)
     {
         int n = nums.size();
         for (int i = 0; i < n - 1; i++)
@@ -28,20 +28,20 @@ public:
     }
 };
 
-TEST(sortArray_912_bubble, sortArray_912_bubble_1)
+TEST(sortArray_bubble, sortArray_bubble_1)
 {
     Solution s;
     vector<int> in = {5, 2, 3, 1};
     vector<int> ans = {1, 2, 3, 5};
-    EXPECT_EQ(s.sortArray_912_bubble(in), ans);
+    EXPECT_EQ(s.sortArray_bubble(in), ans);
 }
 
-TEST(sortArray_912_bubble, sortArray_912_bubble_2)
+TEST(sortArray_bubble, sortArray_bubble_2)
 {
     Solution s;
     vector<int> in = {5, 1, 1, 2, 0, 0};
     vector<int> ans = {0, 0, 1, 1, 2, 5};
-    EXPECT_EQ(s.sortArray_912_bubble(in), ans);
+    EXPECT_EQ(s.sortArray_bubble(in), ans);
 }
 
 int main(int argc, char **argv)

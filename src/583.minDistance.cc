@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-22
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    int minDistance_583(string word1, string word2)
+    int minDistance(string word1, string word2)
     {
         int m = word1.size();
         int n = word2.size();
@@ -36,13 +36,13 @@ public:
     }
 };
 
-TEST(minDistance_583, minDistance_583_1)
+TEST(minDistance, minDistance_1)
 {
     Solution s;
     string in1 = "sea";
     string in2 = "eat";
     int ans = 2;
-    EXPECT_EQ(s.minDistance_583(in1, in2), ans);
+    EXPECT_EQ(s.minDistance(in1, in2), ans);
 }
 
 int main(int argc, char **argv)

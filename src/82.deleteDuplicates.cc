@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-26
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    ListNode *deleteDuplicates_82(ListNode *head)
+    ListNode *deleteDuplicates(ListNode *head)
     {
         if (head == nullptr)
             return head;
@@ -59,20 +59,20 @@ public:
     }
 };
 
-TEST(deleteDuplicates_82, deleteDuplicates_82_1)
+TEST(deleteDuplicates, deleteDuplicates_1)
 {
     Solution s;
     List in = {1, 2, 3, 3, 4, 4, 5};
     List ans = {1, 2, 5};
-    EXPECT_TRUE(is_same_list(s.deleteDuplicates_82(in.head), ans.head));
+    EXPECT_TRUE(is_same_list(s.deleteDuplicates(in.head), ans.head));
 }
 
-TEST(deleteDuplicates_82, deleteDuplicates_82_2)
+TEST(deleteDuplicates, deleteDuplicates_2)
 {
     Solution s;
     List in = {1, 1, 1, 2, 3};
     List ans = {2, 3};
-    EXPECT_TRUE(is_same_list(s.deleteDuplicates_82(in.head), ans.head));
+    EXPECT_TRUE(is_same_list(s.deleteDuplicates(in.head), ans.head));
 }
 
 int main(int argc, char **argv)

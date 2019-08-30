@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-09
+ * Last Modified:  2019-08-30
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    int leastInterval_621(vector<char> &tasks, int n)
+    int leastInterval(vector<char> &tasks, int n)
     {
         vector<int> cnt(26, 0);
         int max_cnt = 0;
@@ -35,31 +35,31 @@ public:
     }
 };
 
-TEST(leastInterval_621, leastInterval_621_1)
+TEST(leastInterval, leastInterval_1)
 {
     Solution s;
     vector<char> in = {'A', 'A', 'A', 'B', 'B', 'B'};
     int n = 2;
     int ans = 8;
-    EXPECT_EQ(s.leastInterval_621(in, n), ans);
+    EXPECT_EQ(s.leastInterval(in, n), ans);
 }
 
-TEST(leastInterval_621, leastInterval_621_2)
+TEST(leastInterval, leastInterval_2)
 {
     Solution s;
     vector<char> in = {'A', 'A', 'A', 'B', 'B', 'B'};
     int n = 0;
     int ans = 6;
-    EXPECT_EQ(s.leastInterval_621(in, n), ans);
+    EXPECT_EQ(s.leastInterval(in, n), ans);
 }
 
-TEST(leastInterval_621, leastInterval_621_3)
+TEST(leastInterval, leastInterval_3)
 {
     Solution s;
     vector<char> in = {'A', 'A', 'A', 'B', 'B', 'B'};
     int n = 50;
     int ans = 104;
-    EXPECT_EQ(s.leastInterval_621(in, n), ans);
+    EXPECT_EQ(s.leastInterval(in, n), ans);
 }
 
 int main(int argc, char **argv)

@@ -17,7 +17,7 @@
 class Solution
 {
 public:
-    int rob_198(vector<int> &nums)
+    int rob(vector<int> &nums)
     {
         if (nums.size() == 0)
             return 0;
@@ -36,25 +36,25 @@ public:
     }
 };
 
-TEST(rob_198, rob_198_1)
+TEST(rob, rob_1)
 {
     Solution s;
     vector<int> in = {1, 2, 3, 1};
-    EXPECT_EQ(s.rob_198(in), 4);
+    EXPECT_EQ(s.rob(in), 4);
 }
 
-TEST(rob_198, rob_198_2)
+TEST(rob, rob_2)
 {
     Solution s;
     vector<int> in = {2, 7, 9, 3, 1};
-    EXPECT_EQ(s.rob_198(in), 12);
+    EXPECT_EQ(s.rob(in), 12);
 }
 
-TEST(rob_198, rob_198_3)
+TEST(rob, rob_3)
 {
     Solution s;
     vector<int> in = {2, 1, 1, 2};
-    EXPECT_EQ(s.rob_198(in), 4);
+    EXPECT_EQ(s.rob(in), 4);
 }
 
 int main(int argc, char **argv)

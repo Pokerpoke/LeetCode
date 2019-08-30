@@ -2,3 +2,5 @@
 .vscode
 build
 CMakeSettings.json
+temp*.cc
+a.out

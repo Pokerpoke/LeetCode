@@ -5,7 +5,7 @@ class Solution
 public:
     bool DFS(vector<int> &nums, vector<bool> &vis, int i, int a, int cur)
     {
-        }
+    }
     bool makesquare(vector<int> &nums)
     {
         int sum = accumulate(nums.begin(), nums.end(), 0);
@@ -17,6 +17,7 @@ public:
                 return false;
         sort(nums.begin(), nums.end());
     }
+    return 1;
 };
 
 TEST(makesquare, makesquare_1)

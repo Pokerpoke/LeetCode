@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-08-13
+ * Last Modified:  2019-09-07
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -40,8 +40,12 @@ void print_tree(TreeNode *root)
             cout << temp->val << " ";
         if (temp->left != nullptr)
             root_ptrs.push(temp->left);
+        else
+            cout << "NULL ";
         if (temp->right != nullptr)
             root_ptrs.push(temp->right);
+        else
+            cout << "NULL ";
         root_ptrs.pop();
     }
     cout << endl;

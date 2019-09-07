@@ -8,7 +8,7 @@
  * @brief    
  * @version  0.0.1
  * 
- * Last Modified:  2019-07-30
+ * Last Modified:  2019-09-07
  * Modified By:    Jiang Yang (pokerpoke@qq.com)
  * 
  */
@@ -54,9 +54,15 @@ TEST(test_tree, print)
     t1.print();
 }
 
-TEST(test_tree, print_NULL)
+TEST(test_tree, print_NULL_1)
 {
     Tree t1{NULL, NULL, NULL};
+    t1.print();
+}
+
+TEST(test_tree, print_NULL_2)
+{
+    Tree t1{1, NULL, 2, NULL, 3, NULL, 4};
     t1.print();
 }
 

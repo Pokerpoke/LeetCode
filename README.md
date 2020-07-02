@@ -11,6 +11,8 @@
 - cmake
 - googletest
 
+- Ubuntu20.04及以上执行：`sudo apt install build-essential cmake libgtest-dev`
+
 ## 创建新git分支
 
 项目为了不污染master分支，解答放到了solutions分支下，如果直接fork过去可以直接在master分支上提交题解，单独创建solutions分支也可以。

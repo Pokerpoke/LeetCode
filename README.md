@@ -1,6 +1,6 @@
 # LeetCode C++ 本地调试环境
 
-![Build Status](https://github.com/github/docs/actions/workflows/workflow.yml/badge.svg?branch=main)
+![Build Status](https://github.com/Raymoonkie/LeetCode/actions/workflows/workflow.yml/badge.svg?branch=main)
 
 **注** 适用于Ubuntu/WSL
 

@@ -1,6 +1,6 @@
 # LeetCode C++ 本地调试环境
 
-[![Build Status](https://travis-ci.com/Pokerpoke/LeetCode.svg?branch=master)](https://travis-ci.com/Pokerpoke/LeetCode)
+[![Build Status](https://travis-ci.com/Raymoonkie/LeetCode.svg?branch=main)](https://travis-ci.com/Raymoonkie/LeetCode)
 
 **注** 适用于Ubuntu/WSL
 

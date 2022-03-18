@@ -7,7 +7,7 @@
  * @date     2022-03
  * @brief
  *
- * Last Modified:  2022-03-15
+ * Last Modified:  2022-03-18
  * Modified By:    Pokerpoke (pokerpoke@qq.com)
  *
  */
@@ -49,7 +49,7 @@ TEST(climbStairs, climbStairs_2)
     EXPECT_EQ(s.climbStairs(in), ans);
 }
 
-TEST(climbStairs, climbStairs_2)
+TEST(climbStairs, climbStairs_3)
 {
     Solution s;
     int in = 1;

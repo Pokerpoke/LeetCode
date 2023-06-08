@@ -30,6 +30,11 @@ void print_list(ListNode *head)
 
 bool is_same_list(ListNode *l1, ListNode *l2)
 {
+    std::cout << "l1 : ";
+    print_list(l1);
+    std::cout << "l2 : ";
+    print_list(l2);
+
     while (l1 != nullptr && l2 != nullptr && l1->val == l2->val)
     {
         l1 = l1->next;

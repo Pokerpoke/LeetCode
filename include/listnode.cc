@@ -1,16 +1,16 @@
 /**
- * 
+ *
  * Copyright (c) 2019 NUAA Jiang Yang
- * 
+ *
  * @file
  * @author   Jiang Yang (pokerpoke@qq.com)
  * @date     2018-09
- * @brief    
+ * @brief
  * @version  0.0.1
- * 
- * Last Modified:  2019-08-26
- * Modified By:    Jiang Yang (pokerpoke@qq.com)
- * 
+ *
+ * Last Modified:  2023-06-08
+ * Modified By:    Pokerpoke (pokerpoke@qq.com)
+ *
  */
 #include "listnode.h"
 
@@ -43,8 +43,7 @@ List::List()
     this->head = nullptr;
 }
 
-List::List(std::initializer_list<int> l)
-    : head(nullptr), tail(nullptr)
+List::List(std::initializer_list<int> l) : head(nullptr), tail(nullptr)
 {
     for (auto it : l)
         insert(it);
@@ -52,6 +51,8 @@ List::List(std::initializer_list<int> l)
 
 List::~List()
 {
+    if (!m_release)
+        return;
     ListNode *del_p = nullptr;
     while (head != nullptr)
     {
@@ -69,15 +70,20 @@ void List::insert(int x)
     else
     {
         ListNode *p = new ListNode(x);
-        tail->next = p;
-        tail = p;
-        tail->next = nullptr;
+        tail->next  = p;
+        tail        = p;
+        tail->next  = nullptr;
     }
 }
 
 void List::print()
 {
     print_list(this->head);
+}
+
+void List::setRelease(bool release)
+{
+    m_release = release;
 }
 
 bool List::operator==(const List &l1) const

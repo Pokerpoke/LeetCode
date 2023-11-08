@@ -8,8 +8,10 @@
 # @brief    
 # @version  0.0.1
 # 
-# Last Modified:  2019-05-21
 # Modified By:    Jiang Yang (pokerpoke@qq.com)
+#
+# Last Modified:  2023-11-08
+# Modified By:    HangX-Ma (contour.9x@gmail.com)
 # 
 ################################################################################
 set -e
@@ -20,11 +22,8 @@ CMAKE_SOURCE_DIR=$(dirname $(readlink -f $0))
 CMAKE_SOURCE_DIR=$(pwd)
 cd ${CMAKE_SOURCE_DIR}
 
-if [ ! -d ./build ] 
-then
-   mkdir build 
-fi
+cmake -B build
+cmake --build build -j`nproc`
 
-cd build && cmake ..  && make $1 -j8 && cd src 
-
-./$1
+file_path=$1
+./build/${file_path%%\.cc}

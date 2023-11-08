@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Update apt-get.
+apt-get -y update
+# Install packages.
+apt-get -y install \
+    build-essential \
+    clang-14 \
+    clang-format-14 \
+    clang-tidy-14 \
+    cmake \
+    libgtest-dev \
+    ninja-build \
+    doxygen \
+    git \
+    pkg-config

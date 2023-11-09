@@ -23,7 +23,7 @@ jobs:
       #
       # To add more build types (Release, Debug, RelWithDebInfo, etc.) customize the build_type list.
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
         build_type: [Debug, Release]
         c_compiler: [gcc, clang, cl]
         include:
@@ -46,6 +46,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Install gtest
+      run: |
+        sudo apt install build-essential cmake libgtest-dev
 
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.

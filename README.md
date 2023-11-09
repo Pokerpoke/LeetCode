@@ -30,7 +30,7 @@
 调试运行，执行脚本或者在VSCode中点击CMake扩展的Debug按钮。
 
 ```shell
-./leetcode ${ID}.${PROBLEM_NAME}
+./leetcode ./src/${ID}.${PROBLEM_NAME}
 ```
 
 ## 持续集成

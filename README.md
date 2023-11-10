@@ -1,6 +1,6 @@
 # LeetCode C++ 本地调试环境
 
-![Build Status](https://github.com/Pokerpoke/LeetCode/actions/workflows/LeetCode.yml/badge.svg)
+[![Build Status](https://github.com/Pokerpoke/LeetCode/actions/workflows/LeetCode.yml/badge.svg)](https://github.com/Pokerpoke/LeetCode/actions)
 
 **注** 适用于Ubuntu/WSL
 
@@ -32,7 +32,3 @@
 ```shell
 ./leetcode ./src/${ID}.${PROBLEM_NAME}
 ```
-
-## 持续集成
-
-在fork的仓库中可以直接启用TravisCI功能，最后修改下Travis的图标的地址就能变成自己的仓库啦。

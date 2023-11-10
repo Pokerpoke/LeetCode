@@ -59,7 +59,7 @@ bool is_same_tree(TreeNode *root1, TreeNode *root2)
     return false;
 }
 
-Tree::Tree(std::initializer_list<int> il) : q(il)
+Tree::Tree(std::initializer_list<int> il) : q(il), root(nullptr)
 {
     if (q.empty())
         return;
